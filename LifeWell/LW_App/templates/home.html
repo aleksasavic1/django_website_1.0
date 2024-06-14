@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+<section id="home_section">
+        <h1 style="margin-left: 12px;"><b>ABOUT HEALTH</b></h1>
+        <p>Health has a variety of definitions, which have been used for different purposes over time. Health can be promoted by 
+            encouraging healthful activities, such as regular physical exercise and adequate sleep,[1] and by reducing or avoiding 
+            unhealthful activities or situations, such as smoking or excessive stress. Some factors affecting health are due to individual 
+            choices, such as whether to engage in a high-risk behavior, while others are due to structural causes, such as whether the 
+            society is arranged in a way that makes it easier or harder for people to get necessary healthcare services. Still, other 
+            factors are beyond both individual and group choices, such as genetic disorders.</p>
+        <p>The concept of the "<i>health field,</i>" as distinct from medical care, emerged from the Lalonde report from Canada. 
+            The report identified three interdependent fields as key determinants of an individual's health. These are:<p>
+        <ol>
+            <li><b>Biomedical:</b> all aspects of health, physical and mental, developed within the human body as influenced by genetic make-up.</li>
+            <li><b>Environmental:</b> all matters related to health external to the human body and over which the individual has little or no control;</li>
+            <li><b>Lifestyle:</b> the aggregation of personal decisions (<i>i.e., over which the individual has control</i>) that can be said to contribute to, or cause, illness or death;</li>
+        </ol>
+</section><aside id="home_aside">
+    <div id="carouselExample" class="carousel slide" style="border: 1px solid gray;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/apples.jpg' %}" class="d-block w-100" alt="apples" style="height: 400px;">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/teeth.jpg' %}" class="d-block w-100" alt="teeth" style="height: 400px;">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/no_smoke.jpg' %}" class="d-block w-100" alt="no_smoke" style="height: 400px;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</aside>
+<p style="margin: 6px 22px 0px 22px;">The environment is often cited as an important factor influencing the health status of individuals. This includes characteristics 
+    of the natural environment, the built environment and the social environment. Factors such as clean water and air, adequate 
+    housing, and safe communities and roads all have been found to contribute to good health, especially to the health of infants 
+    and children.[12][24] Some studies have shown that a lack of neighborhood recreational spaces including natural environment 
+    leads to lower levels of personal satisfaction and higher levels of obesity, linked to lower overall health and well-being.[25]
+     It has been demonstrated that increased time spent in natural environments is associated with improved self-reported health,[26]
+      suggesting that the positive health benefits of natural space in urban neighborhoods should be taken into account in public 
+      policy and land use.
+      Genetics, or inherited traits from parents, also play a role in determining the health status of individuals and populations. 
+      This can encompass both the predisposition to certain diseases and health conditions, as well as the habits and behaviors 
+      individuals develop through the lifestyle of their families. For example, genetics may play a role in the manner in which 
+      people cope with stress, either mental, emotional or physical. For example, obesity is a significant problem in the United 
+      States that contributes to poor mental health and causes stress in the lives of many people.[27] One difficulty is the issue 
+      raised by the debate over the relative strengths of genetics and other factors; interactions between genetics and environment 
+      may be of particular importance.</p>
+{% endblock%}
+
+
+
+{% block images %}
+{% endblock %}
+

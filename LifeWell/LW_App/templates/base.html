@@ -1,0 +1,84 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static '/images/fruit_icon.ico' %}" type="image/x-icon">
+    <style>
+        body {
+            background-image: url("{% static 'images/website_background_image.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+        #home_section {
+            display: inline-block;
+            width: 800px;
+            padding: 0 8px 14px 0;
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+            margin-left: 18px;
+            margin-bottom: 8px;
+        }
+
+        #home_aside {
+            display: inline-block;
+            width: 700px;
+            vertical-align: top;
+            padding: 26px 18px 35px 18px;
+            border-bottom: 1px solid gray;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <ul>
+        <li><a href="{% url 'home' %}">HOME</a></li>
+        <li><a href="{% url 'fruits' %}">FRUITS</a></li>
+        <li><a href="{% url 'training' %}">TRAINING</a></li>
+        <li style="float: right; padding: 7px 7px 0 0;"><img src="{% static '/images/fruits_logo.png' %}" alt="logo" width="60px"></li>
+    </ul>
+    
+    
+    {% block images %}
+    
+    {% endblock %}
+
+
+    {% block content %}
+    {% endblock %}
+
+    {% block downimages %}
+    {% endblock %}
+
+    {% block current_time %}
+        <p id="current_time" style="left: 0; bottom: 0; width: 100%;  padding: 2px;  text-align: center;  margin-top: 10px;"></p>
+
+        <script>
+            function show_current_time() {
+                var date = new Date();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var seconds = date.getSeconds();
+                var format_time = hours + ':' + minutes + ':' + seconds;
+                document.getElementById('current_time').textContent = format_time;
+            }
+            show_current_time();
+            setInterval(show_current_time, 1000);
+        </script>
+    {% endblock %}
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
+
+</body>
+</html>

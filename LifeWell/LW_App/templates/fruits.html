@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Fruits{% endblock %}
+
+
+{% block content %}
+    <div style="margin: 16px;">
+        <h1 style="margin-left: 8px;"><b>ABOUT FRUITS</b></h1>
+        <p>In <i><a href="#subheading-1">botany</a></i>, a fruit is the seed-bearing structure in flowering plants that is formed from the ovary after flowering 
+            (see Fruit anatomy).</p>
+        <p>Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds. Edible fruits in 
+            particular have long propagated using the movements of humans and other animals in a symbiotic relationship that 
+            is the means for seed dispersal for the one group and nutrition for the other; <i>humans and many other animals have become
+            dependent on fruits as a source of food.</i>[1] Consequently, fruits account for a substantial fraction of the world's 
+            agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural and symbolic meanings.</p>
+        <p>In common language usage, fruit normally means the <ins>seed-associated fleshy structures</ins> (or produce) of plants that typically 
+            are sweet or sour and edible in the raw state, such as apples, bananas, grapes, lemons, oranges, and strawberries. 
+            In botanical usage, the term fruit also includes many structures that are not commonly called 'fruits' in everyday language, 
+            such as nuts, bean pods, corn kernels, tomatoes, and wheat grains.</p>
+        <h2 id="subheading-1"><ins>Botanical vs. culinary</ins></h2>
+        <p>Many common language terms used for fruit and seeds differ from botanical classifications. For example, 
+            in botany, a fruit is a ripened ovary or carpel that contains seeds, e.g., an orange, pomegranate, 
+            tomato or a pumpkin. A nut is a type of fruit (and not a seed), and a seed is a ripened ovule.</p>
+        <p>In culinary language, a fruit is the sweet- or not sweet- (even sour-) tasting produce of a specific plant (e.g., a peach, 
+            pear or lemon); nuts are hard, oily, non-sweet plant produce in shells (hazelnut, acorn). Vegetables, so-called, typically 
+            are savory or non-sweet produce (zucchini, lettuce, broccoli, and tomato). but some may be sweet-tasting (sweet potato).</p>
+        <p>Examples of botanically classified fruit that are typically called vegetables include cucumber, pumpkin, and squash 
+            (all are cucurbits); beans, peanuts, and peas (all legumes); and corn, eggplant, bell pepper (or sweet pepper), and 
+            tomato. Many spices are fruits, botanically speaking, including black pepper, chili pepper, cumin and allspice .[4] In 
+            contrast, rhubarb is often called a fruit when used in making pies, but the edible produce of rhubarb is actually the 
+            leaf stalk or petiole of the plant.[6] Edible gymnosperm seeds are often given fruit names, e.g., ginkgo nuts and pine nuts.</p>
+        <p>Botanically, a cereal grain, such as corn, rice, or wheat is a kind of fruit (termed a caryopsis). However, the fruit wall is 
+            thin and fused to the seed coat, so almost all the edible grain-fruit is actually a seed.</p>
+    </div>
+{% endblock %}
+
+{% block downimages %}
+    <img src="{% static 'images/fruits_image.jpg' %}" alt="fruits" width="600px" style="display: block; margin: 40px auto 60px 140px; border: 1px solid gray; float: left;">
+    
+    <div style="width: 500px; height: 340px; margin: 40px 160px 0 0; display: block; overflow: scroll; float: right; background-color: lightyellow; border: 1px solid gray;">
+        <p style="margin: 4px 0 0 10px;">As the ovules develop into seeds, the ovary begins to ripen and the ovary wall, the pericarp, may become fleshy (as in berries 
+            or drupes), or it may form a hard outer covering (as in nuts). In some multi-seeded fruits, the extent to which a fleshy 
+            structure develops is proportional to the number of fertilized ovules.[13] The pericarp typically is differentiated into 
+            two or three distinct layers; these are called the exocarp (outer layer, also called epicarp), mesocarp (middle layer), 
+            and endocarp (inner layer). Seedlessness is an important feature of some fruits of commerce. Commercial cultivars of
+            bananas and pineapples are examples of seedless fruits. Some cultivars of citrus fruits (especially grapefruit, mandarin 
+            oranges, navel oranges), satsumas, table grapes, and of watermelons are valued for their seedlessness. In some species, 
+            seedlessness is the result of parthenocarpy, where fruits set without fertilization. Parthenocarpic fruit-set may (or may
+            not) require pollination, but most seedless citrus fruits require a stimulus from pollination to produce fruit.[28] 
+            Seedless bananas and grapes are triploids, and seedlessness results from the abortion of the embryonic plant that is 
+            produced by fertilization, a phenomenon known as stenospermocarpy, which requires normal pollination and fertilization.</p>
+    </div>
+{% endblock %}
+
+
+
+{% block current_time %}
+        <p id="current_time" style="left: 0; bottom: 0; width: 100%;  padding: 2px;  text-align: center; margin-top: 460px;"></p>
+
+        <script>
+            function show_current_time() {
+                var date = new Date();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var seconds = date.getSeconds();
+                var format_time = hours + ':' + minutes + ':' + seconds;
+                document.getElementById('current_time').textContent = format_time;
+            }
+            show_current_time();
+            setInterval(show_current_time, 1000);
+        </script>
+    {% endblock %}
